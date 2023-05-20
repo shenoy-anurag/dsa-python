@@ -1,3 +1,7 @@
+"""
+This is an implementation of the Stack datastructure using a linked list.
+"""
+
 class Node:
     def __init__(self, item, next):
         self.item = item
