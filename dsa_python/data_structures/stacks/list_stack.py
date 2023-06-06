@@ -2,7 +2,7 @@
 This is an implementation of the Stack datastructure using a list.
 """
 
-from dsa_python.data_structures.stack import BaseStack
+from dsa_python.data_structures.stacks.base_stack import BaseStack
 
 
 class Stack(BaseStack):
