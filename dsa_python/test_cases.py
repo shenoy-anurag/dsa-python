@@ -17,6 +17,7 @@ class TestCase:
         if strict:
             if output == self.output:
                 return PASSED
+            return FAILED
         else:
             if isinstance(self.output, list):
                 is_same = self.compare_lists(output=output)
@@ -135,7 +136,7 @@ def check_all_passed(dr: DisplayResults):
     # print(results)
     passed = [PASSED for _ in range(len(results))]
     # print(passed)
-    bool_results = np.isin(np.array(passed), results).tolist()
+    bool_results = (np.array(passed) == np.array(results)).tolist()
     # print(bool_results)
     return all(bool_results)
 
